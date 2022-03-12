@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Noto+Sans+KR&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+}
+body #profile {
+  width: 100%;
+  height: 420px;
+  background: #f1f1f1;
+  padding: 30px 5vw;
+}
+body #profile > .inner {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+body #profile > .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #profile > .inner article {
+  width: 25%;
+  float: left;
+}
+body #profile > .inner article h1 {
+  font: bold 120px/1 "DM Sans";
+  display: inline-block;
+}
+body #profile > .inner article .img {
+  width: 350px;
+  height: 350px;
+}
+body #profile > .inner article .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body #profile > .inner article:last-child {
+  width: 50%;
+}
+body #profile > .inner article .introduce {
+  width: 90%;
+  padding: 20px;
+  position: relative;
+  transform: translate(10%, 70%);
+}
+body #profile > .inner article .introduce::after {
+  content: "";
+  display: block;
+  width: calc(100% - 40px);
+  height: 3px;
+  background: #666;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body #profile > .inner article .introduce h2 {
+  font: bold 25px/1 "DM Sans";
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+body #profile > .inner article .introduce p {
+  font: normal 16px/1.4 "NOTO SANS";
+}
+body #summary {
+  width: 100%;
+  background: #f1f1f1;
+  padding: 30px 3vw;
+  border-top: 1px solid #545454;
+}
+body #summary > .inner {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+body #summary > .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #summary > .inner article {
+  width: 50%;
+  margin-bottom: 30px;
+  float: left;
+  position: relative;
+}
+body #summary > .inner article .title {
+  width: 40px;
+  height: 100%;
+  border-right: 3px solid #000;
+  float: left;
+}
+body #summary > .inner article .title h2 {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font: bold 20px/1 "DM Sans";
+  text-align: left;
+  letter-spacing: 5px;
+}
+body #summary > .inner article .wrap {
+  display: inline-block;
+  width: calc(100% - 40px);
+  height: 100%;
+  padding: 40px;
+}
+body #summary > .inner .profile {
+  height: 300px;
+}
+body #summary > .inner .profile .wrap table {
+  width: 100%;
+  height: 100%;
+}
+body #summary > .inner .profile .wrap table tr th {
+  font: bold 16px/1 "DM sans";
+  color: #444;
+  text-align: left;
+  width: 30%;
+  letter-spacing: 1px;
+}
+body #summary > .inner .profile .wrap table tr td {
+  font: normal 16px/1 "NOTO SANS";
+  color: #333;
+}
+body #summary > .inner .profile .wrap table tr td a {
+  color: #333;
+  text-decoration: underline;
+}
+body #summary > .inner .skills {
+  height: 300px;
+}
+body #summary > .inner .skills .wrap .logo {
+  width: 25%;
+  height: 50%;
+  float: left;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-between;
+}
+body #summary > .inner .skills .wrap .logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+body #summary > .inner .skills .wrap .logo progress {
+  width: 60%;
+  margin-top: 10px;
+  appearance: none;
+  border-radius: 10px;
+  height: 10px;
+}
+body #summary > .inner .skills .wrap .logo progress::-webkit-progress-bar {
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+body #summary > .inner .skills .wrap .logo progress::-webkit-progress-value {
+  border-radius: 5px;
+  background: #c9c9c9;
+}
+body #summary > .inner .portfolio {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+}
+body #summary > .inner .portfolio .wrap {
+  padding: 0 20px;
+}
+body #summary > .inner .portfolio .wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body #summary > .inner .portfolio .wrap article {
+  float: left;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #c9c9c9;
+  padding: 30px;
+}
+body #summary > .inner .portfolio .wrap article:last-child {
+  margin-bottom: 0;
+}
+body #summary > .inner .portfolio .wrap article .pic {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  transition: 1s;
+  float: left;
+}
+body #summary > .inner .portfolio .wrap article .pic:hover a {
+  opacity: 1;
+}
+body #summary > .inner .portfolio .wrap article .pic a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  font: bold 20px/1.2 "NOTO SANS";
+  letter-spacing: 1px;
+  color: #efefef;
+}
+body #summary > .inner .portfolio .wrap article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body #summary > .inner .portfolio .wrap article .con {
+  border: 1px solid red;
+  width: calc(100% - 400px);
+  height: 100%;
+  float: right;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
